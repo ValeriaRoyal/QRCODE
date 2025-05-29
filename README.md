@@ -4,10 +4,12 @@ Aplicação simples desenvolvida com **JavaScript**, **HTML5** e **CSS3** que pe
 
 ## ⚙️ Tecnologias Utilizadas
 
-- **HTML5:** estrutura da interface.
-- **CSS3:** estilização responsiva e intuitiva.
-- **JavaScript Vanilla:** manipulação de eventos, integração com a API de geração de QR Code e validações.
-- **API Externa (goqr.me):** geração do QR Code via URL dinâmica.
+- **Ionic Framework**: estrutura para desenvolvimento de apps híbridos com suporte a Android/iOS/PWA.
+- **Angular**: arquitetura front-end baseada em componentes.
+- **TypeScript**: tipagem estática e melhores práticas de desenvolvimento.
+- **Cordova/Capacitor** (implícito pelo `config.xml`): integração com APIs nativas.
+- **HTML5 + CSS3**: estrutura e estilos da interface.
+
 
 ## 🎯 Funcionalidades
 
@@ -16,31 +18,52 @@ Aplicação simples desenvolvida com **JavaScript**, **HTML5** e **CSS3** que pe
 - Validação de entrada vazia
 - Exibição do QR Code como imagem diretamente na página
 
-## 📁 Estrutura de Arquivos
+## 📁 Estrutura de Diretórios
 
 ```
-QRCODE/
-├── index.html # Estrutura base da aplicação
-├── style.css # Estilo e responsividade
-└── script.js # Lógica de geração de QR Code e interação com DOM
+project-root/
+├── resources/ # Recursos para build (ícones, splash screens)
+├── src/ # Código-fonte principal do app
+├── config.xml # Configuração do Cordova
+├── ionic.config.json # Configurações específicas do projeto Ionic
+├── package.json # Dependências e scripts npm
+├── tsconfig.json # Configurações do TypeScript
+├── tslint.json # Regras de linting
+└── README.md # Descrição do projeto
 ```
 
-## 🚀 Como Executar
+## 📦 Instalação
 
 1. Clone este repositório:
    ```bash
    git clone https://github.com/ValeriaRoyal/QRCODE.git
-   
-2. Acesse a pasta do projeto:
-   ```bash
    cd QRCODE
-Abra o arquivo index.html em um navegador moderno.
+   
+2. Instale as dependências:
+   ```bash
+   npm install
+3. Execute o app em ambiente de desenvolvimento:
+    ```bash
+    ionic serve
+4. Para rodar no emulador ou dispositivo físico:
+   ```bash
+   ionic cordova run android
 
-## 🧪 Aprendizados Técnicos
+## 🔧 É necessário ter o Android SDK ou Xcode configurado para builds mobile.
+      
+## 🔍 Funcionalidades Esperadas
 
-- Integração com API de terceiros via URL dinâmica
-- Manipulação de DOM em tempo real
-- Validação de entradas do usuário
-- Geração dinâmica de conteúdo visual (imagem QR)
+- Geração de QR Codes a partir de texto/links
+- Leitura de QR Codes usando a câmera do dispositivo
+- Design responsivo adaptável para mobile e web
+- Integração com API externa (ex: goqr.me) ou pacote local de geração/leitura
+
+## 🧪 Aprendizados e Ponto de Estudo
+
+- Arquitetura modular com Angular
+- Uso de componentes, serviços e módulos Ionic
+- Manipulação de plugins nativos via Cordova/Capacitor
+- Deploy em múltiplas plataformas (Android, Web)
+
 
 📌 Este projeto foi desenvolvido com fins de estudo e prática de JavaScript e integração com serviços externos. Contribuições e sugestões são bem-vindas!
