@@ -1,69 +1,109 @@
-# 📱 QR Code Generator
+# 📱 QR Code Generator & Scanner
 
-Aplicação simples desenvolvida com **JavaScript**, **HTML5** e **CSS3** que permite gerar QR Codes a partir de qualquer texto ou URL informada pelo usuário. O projeto tem como foco a prática de manipulação de DOM, consumo de APIs externas e interações dinâmicas com o usuário.
+Aplicação móvel desenvolvida com **Ionic Framework** e **Angular** que permite gerar QR Codes a partir de qualquer texto ou URL, além de escanear códigos QR usando a câmera do dispositivo. O projeto demonstra a integração de plugins nativos em aplicações híbridas e oferece uma interface simples e funcional.
 
 ## ⚙️ Tecnologias Utilizadas
 
-- **Ionic Framework**: estrutura para desenvolvimento de apps híbridos com suporte a Android/iOS/PWA.
-- **Angular**: arquitetura front-end baseada em componentes.
-- **TypeScript**: tipagem estática e melhores práticas de desenvolvimento.
-- **Cordova/Capacitor** (implícito pelo `config.xml`): integração com APIs nativas.
-- **HTML5 + CSS3**: estrutura e estilos da interface.
-
+- **Ionic Framework 3.9.5**: Framework para desenvolvimento de apps híbridos com suporte a Android/iOS/PWA
+- **Angular 5.2.11**: Framework front-end baseado em componentes
+- **TypeScript 2.6.2**: Linguagem de programação tipada baseada em JavaScript
+- **Cordova 7.0.0**: Framework para acesso a recursos nativos do dispositivo
+- **Plugin BarcodeScanner**: Para geração e leitura de códigos QR
+- **HTML5 + CSS3**: Estrutura e estilos da interface
 
 ## 🎯 Funcionalidades
 
-- Campo de entrada para texto ou links
-- Geração instantânea de QR Code ao clicar em "Gerar"
-- Validação de entrada vazia
-- Exibição do QR Code como imagem diretamente na página
+- **Geração de QR Codes**: Digite qualquer texto ou URL e gere um QR Code instantaneamente
+- **Leitura de QR Codes**: Use a câmera do dispositivo para escanear códigos QR
+- **Validação de Entrada**: Evita a geração de QR Codes com texto vazio
+- **Feedback ao Usuário**: Alertas informativos sobre o resultado das operações
+- **Interface com Abas**: Navegação intuitiva entre as diferentes seções do aplicativo
 
-## 📁 Estrutura de Diretórios
+## 📱 Capturas de Tela
+
+*(Adicionar capturas de tela do aplicativo aqui)*
+
+## 📁 Estrutura do Projeto
 
 ```
-project-root/
-├── resources/ # Recursos para build (ícones, splash screens)
-├── src/ # Código-fonte principal do app
-├── config.xml # Configuração do Cordova
-├── ionic.config.json # Configurações específicas do projeto Ionic
-├── package.json # Dependências e scripts npm
-├── tsconfig.json # Configurações do TypeScript
-├── tslint.json # Regras de linting
-└── README.md # Descrição do projeto
+QRCODE/
+├── resources/          # Recursos para build (ícones, splash screens)
+├── src/                # Código-fonte principal do app
+│   ├── app/            # Configuração do aplicativo Angular
+│   ├── assets/         # Recursos estáticos (imagens, fontes)
+│   ├── pages/          # Componentes de página
+│   │   ├── about/      # Página "Sobre"
+│   │   ├── contact/    # Página "Contato"
+│   │   ├── home/       # Página principal com gerador/scanner
+│   │   └── tabs/       # Navegação por abas
+│   └── theme/          # Estilos e temas
+├── config.xml          # Configuração do Cordova
+├── ionic.config.json   # Configurações específicas do projeto Ionic
+├── package.json        # Dependências e scripts npm
+└── README.md           # Documentação do projeto
 ```
 
-## 📦 Instalação
+## 📦 Instalação e Execução
 
-1. Clone este repositório:
+1. **Clone este repositório:**
    ```bash
    git clone https://github.com/ValeriaRoyal/QRCODE.git
    cd QRCODE
-   
-2. Instale as dependências:
+   ```
+
+2. **Instale as dependências:**
    ```bash
    npm install
-3. Execute o app em ambiente de desenvolvimento:
-    ```bash
-    ionic serve
-4. Para rodar no emulador ou dispositivo físico:
+   ```
+
+3. **Execute o app no navegador (desenvolvimento):**
    ```bash
+   ionic serve
+   ```
+
+4. **Para rodar em um dispositivo Android:**
+   ```bash
+   ionic cordova platform add android  # Se a plataforma ainda não estiver adicionada
    ionic cordova run android
+   ```
 
-## 🔧 É necessário ter o Android SDK ou Xcode configurado para builds mobile.
-      
-## 🔍 Funcionalidades Esperadas
+5. **Para gerar um APK:**
+   ```bash
+   ionic cordova build android
+   ```
 
-- Geração de QR Codes a partir de texto/links
-- Leitura de QR Codes usando a câmera do dispositivo
-- Design responsivo adaptável para mobile e web
-- Integração com API externa (ex: goqr.me) ou pacote local de geração/leitura
+> **Nota:** É necessário ter o Android SDK configurado para builds mobile.
 
-## 🧪 Aprendizados e Ponto de Estudo
+## 🔧 Requisitos do Sistema
 
-- Arquitetura modular com Angular
-- Uso de componentes, serviços e módulos Ionic
-- Manipulação de plugins nativos via Cordova/Capacitor
-- Deploy em múltiplas plataformas (Android, Web)
+- **Node.js** 10.x ou superior
+- **npm** 6.x ou superior
+- **Cordova** 7.x ou superior
+- **Android Studio** (para builds Android)
+- **Xcode** (para builds iOS, apenas em macOS)
 
+## 🚀 Melhorias Recentes
 
-📌 Este projeto foi desenvolvido com fins de estudo e prática de JavaScript e integração com serviços externos. Contribuições e sugestões são bem-vindas!
+- Correção de bug na exibição do texto escaneado
+- Adição de conteúdo nas páginas "Sobre" e "Contato"
+- Implementação de validação de entrada e feedback ao usuário
+- Melhorias na documentação do projeto
+
+## 🔜 Próximos Passos
+
+- Atualização das dependências para versões mais recentes
+- Implementação de histórico de QR Codes escaneados
+- Adição de funcionalidade para compartilhar QR Codes gerados
+- Melhorias no design e na experiência do usuário
+
+## 👩‍💻 Desenvolvedora
+
+- **Valéria Regina** - [GitHub](https://github.com/ValeriaRoyal)
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.
+
+---
+
+📌 Este projeto foi desenvolvido com fins de estudo e prática de desenvolvimento de aplicações móveis híbridas com Ionic e Angular. Contribuições e sugestões são bem-vindas!
